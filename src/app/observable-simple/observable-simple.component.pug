@@ -1,0 +1,11 @@
+div.de-margin-box
+  div.de-margin-box
+    input([(ngModel)]="inputValue", placeholder="value to trigger")
+    button#button trigger observable
+
+  div.de-margin-box
+    button((click)="subscribe()") SUBSCRIBE
+    button((click)="unsubscribe()") UNSUBSCRIBE
+
+  div.de-margin-box (valueObs | async)?.value : {{ (valueObs | async)?.value }}
+  div.de-margin-box ((value.value)) : {{ value.value }}

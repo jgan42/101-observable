@@ -1,0 +1,33 @@
+div.de-margin-box
+  div.de-margin-box
+    input([(ngModel)]="mainInputValue[0]", placeholder="first value")
+    input([(ngModel)]="mainInputValue[1]", placeholder="second value")
+    input([(ngModel)]="mainInputValue[2]", placeholder="third value")
+    input([(ngModel)]="mainInputValue[3]", placeholder="fourth value")
+    button#main-button trigger main observable
+
+  div.de-margin-box
+    input([(ngModel)]="inputValue[0]", placeholder="value to trigger")
+    button#button-0 trigger observable 0
+
+  div.de-margin-box
+    input([(ngModel)]="inputValue[1]", placeholder="value to trigger")
+    button#button-1 trigger observable 1
+
+  div.de-margin-box
+    input([(ngModel)]="inputValue[2]", placeholder="value to trigger")
+    button#button-2 trigger observable 2
+
+  div.de-margin-box
+    input([(ngModel)]="inputValue[3]", placeholder="value to trigger")
+    button#button-3 trigger observable 3
+
+  div.de-margin-box
+    button((click)="subscribe()") SUBSCRIBE
+    button((click)="unsubscribe()") UNSUBSCRIBE
+
+  div.de-margin-box ((mainValueObs | async)) : [{{ (mainValueObs | async) }}]
+  div.de-margin-box ((mainValue)) : [{{ mainValue }}]
+  div.de-margin-box ((dependantValueObs | async)) : [{{ (dependantValueObs | async) }}]
+  div.de-margin-box ((dependantValue)) : [{{ dependantValue }}]
+

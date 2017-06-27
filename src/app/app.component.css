@@ -1,0 +1,22 @@
+.main-container {
+    display: flex;
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: #cacaca;
+    font-size: 15px;
+    height: calc(100vh - 16px);
+    width: 150px;
+}
+
+.side-bar > div {
+    width: auto;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.side-bar > div.active {
+    color: blue;
+}
